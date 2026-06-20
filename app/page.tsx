@@ -203,11 +203,11 @@ export default function Home() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link href="/tutorials/regelwerk" className="btn-premium btn-info text-center flex-grow">
+                <Link href="regelwerk" className="btn-premium btn-info text-center flex-grow">
                   <span>Unsere Regeln</span>
                   <RiArrowRightUpLine />
                 </Link>
-                <Link href="/tutorials/votes" className="btn-premium btn-info text-center flex-grow">
+                <Link href="/tutorials/join" className="btn-premium btn-info text-center flex-grow">
                   <span>Wie joine ich?</span>
                   <RiArrowRightUpLine />
                 </Link>
