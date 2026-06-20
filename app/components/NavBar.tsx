@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React, { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   RiHome4Fill,
   RiNewspaperFill,
@@ -50,13 +50,13 @@ export const NavBar = () => {
               <li key={link.href} className="mx-0.5 md:mx-1">
                 <Link
                   href={link.href}
-                  target={link.external ? '_blank' : '_self'}
-                  className={`nav-link ${active ? 'nav-link-active' : ''}`}
+                  target={link.external ? "_blank" : "_self"}
+                  className={`nav-link ${active ? "nav-link-active" : ""}`}
                 >
-                  <link.icon className={`text-lg md:mr-1.5 transition-transform duration-300 ${active ? 'scale-110 text-brand-cyan' : 'text-neutral-400 group-hover:text-white'}`} />
+                  <link.icon className={`text-lg md:mr-1.5 transition-transform duration-300 ${active ? "scale-110 text-brand-cyan" : "text-neutral-400 group-hover:text-white"}`} />
 
                   {/* Button Mobile Adaption */}
-                  <span className={`text-sm tracking-wide md:inline ${active ? 'inline font-bold' : 'hidden'}`}>
+                  <span className={`text-sm tracking-wide md:inline ${active ? "inline font-bold" : "hidden"}`}>
                     {link.label}
                   </span>
                 </Link>
