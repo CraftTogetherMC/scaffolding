@@ -49,7 +49,7 @@ export const Footer = () => {
               and the
               {" "}
               <a
-                href="https://masercloud.de"
+                href="https://masercloud.de/contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-brand-cyan transition-colors"
