@@ -122,9 +122,9 @@ export default function Home() {
               src="/logo_lettering.png"
               className="max-h-48 md:max-h-56 object-contain cursor-pointer transition transform duration-500 hover:scale-105 drop-shadow-[0_10px_20px_rgba(52,180,244,0.35)]"
               onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                const textFallback = document.getElementById('logo-text-fallback');
-                if (textFallback) textFallback.style.display = 'block';
+                e.currentTarget.style.display = "none";
+                const textFallback = document.getElementById("logo-text-fallback");
+                if (textFallback) textFallback.style.display = "block";
               }}
             />
           </div>
@@ -316,7 +316,7 @@ export default function Home() {
           <div className="glass-card p-6 md:p-8 rounded-2xl">
             
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className={`h-3 w-3 rounded-full ${status.online ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
+              <span className={`h-3 w-3 rounded-full ${status.online ? "bg-green-500 animate-pulse" : "bg-red-500"}`}></span>
               Server-Status & Live-Spieler
             </h3>
 
@@ -375,9 +375,9 @@ export default function Home() {
                               <span
                                 className="text-[10px] font-bold px-1.5 py-0.5 rounded flex-shrink-0"
                                 style={{
-                                  color: player.rankColor ?? '#AAAAAA',
-                                  border: `1px solid ${player.rankColor ?? '#AAAAAA'}55`,
-                                  background: `${player.rankColor ?? '#AAAAAA'}15`,
+                                  color: player.rankColor ?? "#AAAAAA",
+                                  border: `1px solid ${player.rankColor ?? "#AAAAAA"}55`,
+                                  background: `${player.rankColor ?? "#AAAAAA"}15`,
                                 }}
                               >
                                 {player.rank}
@@ -385,7 +385,7 @@ export default function Home() {
                             )}
                             <span
                               className="text-sm font-medium truncate"
-                              style={{ color: player.nameColor ?? '#FFFFFF' }}
+                              style={{ color: player.nameColor ?? "#FFFFFF" }}
                             >
                               {player.username}
                             </span>
