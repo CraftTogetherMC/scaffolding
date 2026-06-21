@@ -36,7 +36,7 @@ export const Footer = () => {
             </p>
 
             <p className="text-xs text-neutral-600">
-              Created with ❤ by the
+              Created with <a href="/halo.mp4">❤</a> by the
               {" "}
               <a
                 href="https://masercloud.de/contact"
