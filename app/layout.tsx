@@ -43,11 +43,15 @@ export default function RootLayout({
     >
 
       <body className="min-h-full flex flex-col bg-neutral-dark text-neutral-200">
-        <NavBar />
+
+        <NavBar/>
+        
         <main className="flex-grow flex flex-col">
           {children}
         </main>
-        <Footer />
+        
+        <Footer/>
+     
       </body>
 
     </html>
