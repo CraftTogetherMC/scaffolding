@@ -7,9 +7,9 @@ import {
   RiHome4Fill,
   RiNewspaperFill,
   RiBookmarkFill,
-  RiVipDiamondFill,
   RiMap2Fill
 } from "react-icons/ri";
+import { FaInfo } from "react-icons/fa";
 
 
 // ===== Link Directory ===== \\ 
@@ -17,7 +17,7 @@ const links = [
   { href: "/", label: "Home", icon: RiHome4Fill, external: false },
   { href: "/news", label: "News", icon: RiNewspaperFill, external: false },
   { href: "/regelwerk", label: "Regeln", icon: RiBookmarkFill, external: false },
-  { href: "/tutorials", label: "Infos", icon: RiVipDiamondFill, external: false },
+  { href: "/tutorials", label: "Tutorials", icon: FaInfo, external: false },
   { href: "https://map.craft-together-mc.de", label: "Livemap", icon: RiMap2Fill, external: true },
 ];
 
