@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "lucide-react": "^1.21.0",
+    "marked": "^18.0.5",
     "minecraft-server-util": "^5.4.4",
     "next": "16.2.9",
     "next-mdx-remote-client": "^2.1.11",
