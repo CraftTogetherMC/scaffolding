@@ -36,17 +36,7 @@ export const Footer = () => {
             </p>
 
             <p className="text-xs text-neutral-600">
-              Created with ❤ by{" "}
-              <a
-                href="https://cedrik.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand-cyan transition-colors"
-              >
-                Ceddix
-              </a>
-              {" "}
-              and the
+              Created with ❤ by the
               {" "}
               <a
                 href="https://masercloud.de/contact"
@@ -56,6 +46,17 @@ export const Footer = () => {
               >
                 Masercloud Team
               </a>
+              {" "} and {" "}
+               <a
+                href="https://cedrik.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand-cyan transition-colors"
+              >
+                Ceddix
+              </a>
+              
+              
 
             </p>
 
