@@ -42,7 +42,7 @@ export default function RootLayout({
       className={`${fira.className} h-full antialiased`}
     >
 
-      <body className="min-h-full flex flex-col bg-neutral-dark text-neutral-200">
+      <body className="min-h-full flex flex-col bg-neutral text-neutral-200">
 
         <NavBar/>
         
