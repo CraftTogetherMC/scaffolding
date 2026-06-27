@@ -21,6 +21,7 @@ interface ParsedPlayer {
   rank?: string;
   rankColor?: string;
   nameColor?: string;
+  isAfk?: boolean;
 }
 
 
@@ -32,20 +33,32 @@ function parsePlayerName(raw: string): ParsedPlayer {
   let rankColor: string | undefined;
   let nameColor: string | undefined;
   let username = "";
+  let isAfk = false;
 
   let i = 0;
   while (i < raw.length) {
+    
     if (raw[i] === "§" && i + 1 < raw.length) {
       const code = raw[i + 1].toLowerCase();
       currentColor = MC_COLORS[code] ?? (code === "r" ? "#FFFFFF" : currentColor);
       i += 2;
-    } 
+    }
+
     else if (raw[i] === "[") {
       const end = raw.indexOf("]", i);
       
       if (end !== -1) {
-        rank = raw.slice(i + 1, end);
-        rankColor = currentColor;
+        const bracketContent = raw.slice(i + 1, end);
+
+        if (!username.trim()) {
+          rank = bracketContent;
+          rankColor = currentColor;
+        } 
+        
+        else if (bracketContent.toUpperCase() === "AFK") {
+          isAfk = true;
+        }
+        
         i = end + 1;
         while (i < raw.length && raw[i] === " ") i++;
       } 
@@ -68,6 +81,7 @@ function parsePlayerName(raw: string): ParsedPlayer {
     rank,
     rankColor,
     nameColor: nameColor ?? "#FFFFFF",
+    isAfk,
   };
 
 }
