@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getMdxBySlug } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import { Metadata } from "next";
+import { RiCalendarEventLine } from "react-icons/ri";
 
 
 // ===== File Name ===== \\
@@ -40,7 +41,7 @@ export default async function Regelwerk() {
         {/* Background Image */}
         <div className="fixed inset-0 z-0 pointer-events-none">
             <Image
-            src="/comand.png" 
+            src="/images/comand.png" 
             alt="comand"
             fill
             priority 
@@ -62,6 +63,14 @@ export default async function Regelwerk() {
             <p className="text-neutral-400 mt-2 text-md md:text-lg">
               {data.frontmatter.description}
             </p>
+          )}
+
+          {data.frontmatter.lastUpdated && (
+            <div className="flex items-center gap-1.5 text-xs text-neutral-400 font-medium tracking-wide mt-2">
+              <RiCalendarEventLine className="text-sm text-brand-cyan" />
+              <span>Zuletzt aktualisiert:</span>
+              <span className="text-neutral-300 font-semibold">{data.frontmatter.lastUpdated}</span>
+            </div>
           )}
         
         </header>
