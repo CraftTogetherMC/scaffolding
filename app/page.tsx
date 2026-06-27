@@ -21,6 +21,7 @@ interface Player {
   rank?: string;
   rankColor?: string;
   nameColor?: string;
+  isAfk?: boolean;
 }
 
 
@@ -128,7 +129,7 @@ export default function Home() {
               }}
             />
           </div>
-          
+
           {/* Mini Beschreibung */}
           <p className="text-md md:text-lg text-neutral-300 font-medium tracking-wide max-w-[36rem] mx-auto drop-shadow-md">
             Wir sind ein gemütlicher, aufstrebender Minecraft-Server für alle Freunde des originalgetreuen Survival-Gameplays.
@@ -147,7 +148,7 @@ export default function Home() {
                 </div>
               )}
             </button>
-            
+
             {/* Discord Button (Link) */}
             <a
               href={discordInvite}
@@ -213,31 +214,31 @@ export default function Home() {
                   <span>Wie joine ich?</span>
                   <RiArrowRightUpLine />
                 </Link>
-                
+
               </div>
             </div>
 
           </div>
         </div>
 
-        
+
 
         {/* Server Informationen */}
         <div className="max-w-[62rem] mx-auto mt-12">
           <div className="glass-card p-6 md:p-8 rounded-2xl">
-            
+
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center gap-3">
               Was erwartet dich?
             </h3>
 
             {/* Features */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              
+
               {/* Vanilla Gameplay */}
               <div className="bg-white/[0.03] border border-white/[0.05] p-5 rounded-xl hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300">
                 <h4 className="text-base font-bold text-brand-cyan mb-2">Vanilla Gameplay</h4>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  Spiele wie im Singleplayer, nur eben nicht alleine! 
+                  Spiele wie im Singleplayer, nur eben nicht alleine!
                 </p>
               </div>
 
@@ -305,16 +306,16 @@ export default function Home() {
                 </p>
               </div>
 
-                  
+
             </div>
           </div>
         </div>
-        
+
 
         {/* Server Status */}
         <div className="max-w-[62rem] mx-auto mt-12">
           <div className="glass-card p-6 md:p-8 rounded-2xl">
-            
+
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center gap-3">
               <span className={`h-3 w-3 rounded-full ${status.online ? "bg-green-500 animate-pulse" : "bg-red-500"}`}></span>
               Server-Status & Live-Spieler
@@ -327,7 +328,7 @@ export default function Home() {
             ) : status.online ? (
 
               <div className="space-y-6">
-  
+
                 {/* Infokarten */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
@@ -389,6 +390,14 @@ export default function Home() {
                             >
                               {player.username}
                             </span>
+
+                            {/* AFK badge */}
+                            {player.isAfk && (
+                              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded flex-shrink-0 text-cyan-400/80 border border-cyan-400/25 bg-cyan-400/10">
+                                AFK
+                              </span>
+                            )}
+                            
                           </div>
 
                         </div>
@@ -416,7 +425,7 @@ export default function Home() {
           </div>
         </div>
 
-        
+
         {/* 4. Social Media */}
         <div className="max-w-[62rem] mx-auto mt-12 mb-16 text-center space-y-6">
           <h3 className="text-lg font-bold text-neutral-400 uppercase tracking-widest">
